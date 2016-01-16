@@ -1,15 +1,31 @@
 {
   "name": "angular_jspm17beta_issue",
+  "dependencies": {
+    "angular": "github:angular/bower-angular@^1.4.8"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^0.9.0",
     "plugin-babel": "npm:systemjs-plugin-babel@^0.0.2"
   },
-  "jspm": {}
+  "jspm": {
+    "overrides": {
+      "github:angular/bower-angular@1.4.8": {
+        "main": "angular",
+        "meta": {
+          "angular.js": {
+            "exports": "angular"
+          }
+        }
+      }
+    }
+  }
 }
